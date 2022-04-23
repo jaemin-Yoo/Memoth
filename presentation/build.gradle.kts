@@ -1,7 +1,7 @@
 import com.jaemin.buildsrc.Depends
 
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("kapt")
 }
@@ -10,11 +10,8 @@ android {
     compileSdk = Depends.Versions.androidCompileSdkVersion
 
     defaultConfig {
-        applicationId = "com.jaemin.memoth"
         minSdk = Depends.Versions.minSdkVersion
         targetSdk = Depends.Versions.targetSdkVersion
-        versionCode = Depends.Versions.appVersionCode
-        versionName = Depends.generateVersionName()
 
         testInstrumentationRunner = Depends.Versions.testInstrumentationRunner
     }
@@ -37,6 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -46,6 +47,9 @@ dependencies {
     implementation(Depends.Libraries.appcompat)
     implementation(Depends.Libraries.material)
     implementation(Depends.Libraries.constraintlayout)
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
     androidTestImplementation(Depends.Libraries.test_ext_junit)
     androidTestImplementation(Depends.Libraries.espresso_core)
 }

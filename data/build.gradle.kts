@@ -1,7 +1,7 @@
 import com.jaemin.buildsrc.Depends
 
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
     kotlin("kapt")
 }
