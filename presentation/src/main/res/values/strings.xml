@@ -1,1 +1,10 @@
-<resources></resources>
+<resources>
+
+    <!-- Bottom navigation -->
+    <string name="home">홈</string>
+    <string name="book">단어장</string>
+    <string name="add">단어추가</string>
+    <string name="test">테스트</string>
+    <string name="profile">프로필</string>
+    
+</resources>

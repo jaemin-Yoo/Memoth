@@ -21,6 +21,7 @@ object Depends {
         const val library = "7.1.2"
         const val kotlin_android = "1.5.30"
         const val kotlin_jvm = "1.5.30"
+        const val bottomNavigationVersion = "1.6.0-alpha02"
     }
 
     object Libraries {
@@ -33,6 +34,7 @@ object Depends {
         const val junit = "junit:junit:${Versions.junitVersion}"
         const val test_ext_junit = "androidx.test.ext:junit:${Versions.testExtJunitVersion}"
         const val espresso_core = "androidx.test.espresso:espresso-core:${Versions.espressoVersion}"
+        const val bottom_navigation = "com.google.android.material:material:${Versions.bottomNavigationVersion}"
     }
 
     fun generateVersionName(): String {

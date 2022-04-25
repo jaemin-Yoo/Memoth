@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/git/Memoth/app/src/main/res/drawable/bottom_nav_item_state.xml" value="0.1" />
         <entry key="..\:/git/Memoth/app/src/main/res/layout/activity_main.xml" value="0.1875" />
-        <entry key="..\:/git/Memoth/presentation/src/main/res/layout/activity_main.xml" value="0.1875" />
+        <entry key="..\:/git/Memoth/presentation/src/main/res/drawable/bottom_nav_item_state.xml" value="0.1" />
+        <entry key="..\:/git/Memoth/presentation/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/git/Memoth/presentation/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
