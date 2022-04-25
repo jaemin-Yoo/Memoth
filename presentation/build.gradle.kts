@@ -51,6 +51,5 @@ dependencies {
     androidTestImplementation(Depends.Libraries.test_ext_junit)
     androidTestImplementation(Depends.Libraries.espresso_core)
 
-    implementation(Depends.Libraries.bottom_navigation)
-    implementation("io.github.zagori:bottomnavbar:1.0.3")
+    implementation(Depends.Libraries.zagori_bottom_navigation)
 }
