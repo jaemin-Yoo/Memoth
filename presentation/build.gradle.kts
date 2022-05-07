@@ -48,8 +48,15 @@ dependencies {
     implementation(Depends.Libraries.appcompat)
     implementation(Depends.Libraries.material)
     implementation(Depends.Libraries.constraintlayout)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     androidTestImplementation(Depends.Libraries.test_ext_junit)
     androidTestImplementation(Depends.Libraries.espresso_core)
 
-    implementation(Depends.Libraries.zagori_bottom_navigation)
+    // Custom bottom nav
+    //implementation(Depends.Libraries.zagori_bottom_navigation)
+    implementation("com.github.ibrahimsn98:SmoothBottomBar:1.7.9")
+
+    // Jetpack navigation
+    implementation(Depends.Libraries.navigation_fragment_ktx)
+    implementation(Depends.Libraries.navigation_ui_ktx)
 }

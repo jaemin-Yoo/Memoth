@@ -14,32 +14,28 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/frameLayout"/>
+        app:layout_constraintBottom_toTopOf="@id/fragmentContainer"/>
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainer"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/main_navigation"
         app:layout_constraintTop_toBottomOf="@id/toolBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"/>
 
-    <com.zagori.bottomnavbar.BottomNavBar
+    <me.ibrahimsn.lib.SmoothBottomBar
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:bn_background_color="@color/colorBottomNav"
-        app:bn_item_color="@drawable/bottom_nav_item_state"
-        app:bn_menu="@menu/bottom_navigation_menu"
-        app:bn_curve_vertical_offset="0dp"
-        app:bn_curve_margin="6dp"
-        app:bn_curve_rounded_corner_radius="8dp"
-        app:bn_fab_size="normal"
-        app:bn_fab_menu_index="2"
-        app:bn_fab_background_color="@color/colorPrimary"
-        app:bn_fab_icon_color="@color/colorOnPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        android:layout_height="70dp"
+        app:backgroundColor="@color/colorBackground"
+        app:menu="@menu/bottom_navigation_menu"
+        app:indicatorColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

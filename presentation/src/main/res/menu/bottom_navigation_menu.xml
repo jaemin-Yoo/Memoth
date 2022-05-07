@@ -2,31 +2,25 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_home"
+        android:id="@+id/homeFragment"
         android:enabled="true"
         android:icon="@drawable/ic_menu_home_24"
         android:title="@string/home"/>
 
     <item
-        android:id="@+id/menu_book"
+        android:id="@+id/bookFragment"
         android:enabled="true"
         android:icon="@drawable/ic_menu_book_24"
         android:title="@string/book"/>
 
     <item
-        android:id="@+id/menu_add"
-        android:enabled="true"
-        android:icon="@drawable/ic_menu_add_24"
-        android:title="@string/add"/>
-
-    <item
-        android:id="@+id/menu_test"
+        android:id="@+id/testFragment"
         android:enabled="true"
         android:icon="@drawable/ic_menu_test_24"
         android:title="@string/test"/>
 
     <item
-        android:id="@+id/menu_profile"
+        android:id="@+id/profileFragment"
         android:enabled="true"
         android:icon="@drawable/ic_menu_profile_24"
         android:title="@string/profile"/>

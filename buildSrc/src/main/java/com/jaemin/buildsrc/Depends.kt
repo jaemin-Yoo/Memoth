@@ -23,6 +23,8 @@ object Depends {
         const val kotlin_jvm = "1.5.30"
         const val bottomNavigationVersion = "1.6.0-alpha02"
         const val zagoriBottomNavigationVersion = "1.0.3"
+        const val navigationFragmentKtxVersion = "2.4.2"
+        const val navigationUiKtxVersion = "2.4.2"
     }
 
     object Libraries {
@@ -37,6 +39,8 @@ object Depends {
         const val espresso_core = "androidx.test.espresso:espresso-core:${Versions.espressoVersion}"
         const val bottom_navigation = "com.google.android.material:material:${Versions.bottomNavigationVersion}"
         const val zagori_bottom_navigation = "io.github.zagori:bottomnavbar:${Versions.zagoriBottomNavigationVersion}"
+        const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragmentKtxVersion}"
+        const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUiKtxVersion}"
     }
 
     fun generateVersionName(): String {

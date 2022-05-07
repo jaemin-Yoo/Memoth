@@ -1,55 +1,42 @@
 package com.jaemin.presentation.main
 
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
+import android.widget.PopupMenu
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jaemin.presentation.R
 import com.jaemin.presentation.databinding.ActivityMainBinding
 import com.jaemin.presentation.extension.viewInflateBinding
-import com.zagori.bottomnavbar.BottomNavBar
 
 class MainActivity : AppCompatActivity() {
 
     private val binding by viewInflateBinding(ActivityMainBinding::inflate)
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        setNavController()
+        setupUI()
+    }
+
+    override fun onSupportNavigateUp() = navController.navigateUp()
+
+    private fun setNavController(){
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer) as NavHostFragment
+        navController = navHostFragment.findNavController()
+    }
+
+    private fun setupUI(){
         initToolBar()
-        binding.bottomNavigation.setBottomNavigationListener(object: BottomNavBar.OnBottomNavigationListener{
-            override fun onNavigationItemSelected(menuItem: MenuItem?): Boolean {
-                return when(menuItem!!.itemId){
-                    R.id.menu_home -> {
-                        binding.toolBar.title = ""
-                        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-                        true
-                    }
-                    R.id.menu_book -> {
-                        binding.toolBar.title = "단어장"
-                        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-                        true
-                    }
-                    R.id.menu_add -> {
-                        binding.toolBar.title = "단어추가"
-                        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-                        true
-                    }
-                    R.id.menu_test -> {
-                        binding.toolBar.title = "테스트"
-                        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-                        true
-                    }
-                    R.id.menu_profile -> {
-                        binding.toolBar.title = "프로필"
-                        supportActionBar?.setDisplayHomeAsUpEnabled(false)
-                        true
-                    }
-                    else -> false
-                }
-            }
-        })
+        setBottomNav()
     }
 
     private fun initToolBar() {
@@ -58,5 +45,14 @@ class MainActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true) // 뒤로가기 버튼 활성화
         supportActionBar?.setHomeAsUpIndicator(R.drawable.main_logo) // 뒤로가기 버튼 이미지 수정
+    }
+
+    private fun setBottomNav(){
+        val popupMenu = PopupMenu(this, null)
+        popupMenu.inflate(R.menu.bottom_navigation_menu)
+        val menu = popupMenu.menu
+
+        binding.bottomNavigation.setupWithNavController(menu, navController)
+        setupActionBarWithNavController(navController)
     }
 }
