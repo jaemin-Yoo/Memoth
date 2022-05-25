@@ -1,11 +1,14 @@
 package com.jaemin.presentation
 
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import android.view.WindowInsets
+import com.jaemin.presentation.base.util.Height.Companion.statusBarHeight
 import com.jaemin.presentation.databinding.FragmentHomeBinding
 import com.jaemin.presentation.extension.viewBinding
 
@@ -27,6 +30,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupUI(){
-
+        binding.toolBar.setPadding(0, requireContext().statusBarHeight(), 0, 0) // status bar 높이만큼 toolbar top padding 설정
     }
 }
