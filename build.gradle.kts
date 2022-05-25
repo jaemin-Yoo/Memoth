@@ -4,8 +4,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.0.4")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+        classpath(com.jaemin.buildsrc.Depends.ClassPaths.gradle)
+        classpath(com.jaemin.buildsrc.Depends.ClassPaths.kotlin_gradle_plugin)
+        classpath(com.jaemin.buildsrc.Depends.ClassPaths.hilt_android_gradle_plugin)
     }
 }
 

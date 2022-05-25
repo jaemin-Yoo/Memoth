@@ -4,6 +4,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -48,4 +49,8 @@ dependencies {
     implementation(Depends.Libraries.material)
     testImplementation(Depends.Libraries.junit)
     androidTestImplementation(Depends.Libraries.espresso_core)
+
+    // dependency injection
+    implementation(Depends.Libraries.hilt_android)
+    kapt(Depends.Libraries.hilt_android_compiler)
 }

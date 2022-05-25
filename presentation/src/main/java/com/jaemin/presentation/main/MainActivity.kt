@@ -9,7 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.jaemin.presentation.R
 import com.jaemin.presentation.databinding.ActivityMainBinding
 import com.jaemin.presentation.extension.viewInflateBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val binding by viewInflateBinding(ActivityMainBinding::inflate)

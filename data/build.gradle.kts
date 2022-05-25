@@ -43,4 +43,8 @@ dependencies {
     implementation(Depends.Libraries.android_core_ktx)
     implementation(Depends.Libraries.material)
     testImplementation(Depends.Libraries.junit)
+
+    // dependency injection
+    implementation(Depends.Libraries.hilt_android)
+    kapt(Depends.Libraries.hilt_android_compiler)
 }

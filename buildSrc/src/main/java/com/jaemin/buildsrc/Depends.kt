@@ -6,6 +6,7 @@ object Depends {
 
     object Versions {
         const val appVersionCode = 1_000_000
+        const val gradleVersion = "7.0.4"
         const val androidCompileSdkVersion = 32
         const val targetSdkVersion = 32
         const val minSdkVersion = 21
@@ -25,6 +26,15 @@ object Depends {
         const val zagoriBottomNavigationVersion = "1.0.3"
         const val navigationFragmentKtxVersion = "2.4.2"
         const val navigationUiKtxVersion = "2.4.2"
+        const val hiltVersion = "2.40.1"
+        const val kotlinGradlePluginVersion = "1.6.10"
+    }
+
+    object ClassPaths {
+        const val gradle = "com.android.tools.build:gradle:${Versions.gradleVersion}"
+        const val kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinGradlePluginVersion}"
+        const val hilt_android_gradle_plugin =
+            "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
     }
 
     object Libraries {
@@ -41,6 +51,11 @@ object Depends {
         const val zagori_bottom_navigation = "io.github.zagori:bottomnavbar:${Versions.zagoriBottomNavigationVersion}"
         const val navigation_fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${Versions.navigationFragmentKtxVersion}"
         const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationUiKtxVersion}"
+
+        const val hilt_android =
+            "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+        const val hilt_android_compiler =
+            "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
     }
 
     fun generateVersionName(): String {

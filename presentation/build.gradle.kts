@@ -4,6 +4,7 @@ plugins {
     id("com.android.library")
     kotlin("android")
     kotlin("kapt")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -59,4 +60,8 @@ dependencies {
     // Jetpack navigation
     implementation(Depends.Libraries.navigation_fragment_ktx)
     implementation(Depends.Libraries.navigation_ui_ktx)
+
+    // dependency injection
+    implementation(Depends.Libraries.hilt_android)
+    kapt(Depends.Libraries.hilt_android_compiler)
 }
