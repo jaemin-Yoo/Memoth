@@ -41,4 +41,12 @@ dependencies {
 
     implementation(Depends.Libraries.appcompat)
     testImplementation(Depends.Libraries.junit)
+
+    // Room
+    implementation(Depends.Libraries.room_runtime)
+    kapt(Depends.Libraries.room_compiler)
+
+    // Coroutines
+    implementation(Depends.Libraries.coroutines_core)
+    implementation(Depends.Libraries.coroutines_android)
 }

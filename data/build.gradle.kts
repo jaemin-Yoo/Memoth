@@ -44,7 +44,15 @@ dependencies {
     implementation(Depends.Libraries.material)
     testImplementation(Depends.Libraries.junit)
 
-    // dependency injection
+    // Dependency Injection
     implementation(Depends.Libraries.hilt_android)
     kapt(Depends.Libraries.hilt_android_compiler)
+
+    // Room
+    implementation(Depends.Libraries.room_runtime)
+    kapt(Depends.Libraries.room_compiler)
+
+    // Coroutines
+    implementation(Depends.Libraries.coroutines_core)
+    implementation(Depends.Libraries.coroutines_android)
 }

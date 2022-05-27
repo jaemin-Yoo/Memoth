@@ -28,6 +28,9 @@ object Depends {
         const val navigationUiKtxVersion = "2.4.2"
         const val hiltVersion = "2.40.1"
         const val kotlinGradlePluginVersion = "1.6.10"
+        const val roomVersion = "2.2.6"
+        const val coroutinesCoreVersion = "1.5.0"
+        const val coroutinesAndroidVersion = "1.6.0"
     }
 
     object ClassPaths {
@@ -56,6 +59,12 @@ object Depends {
             "com.google.dagger:hilt-android:${Versions.hiltVersion}"
         const val hilt_android_compiler =
             "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+
+        const val room_runtime = "androidx.room:room-runtime:${Versions.roomVersion}"
+        const val room_compiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+
+        const val coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutinesCoreVersion}"
+        const val coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesAndroidVersion}"
     }
 
     fun generateVersionName(): String {
