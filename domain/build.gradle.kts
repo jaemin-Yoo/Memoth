@@ -45,6 +45,7 @@ dependencies {
     // Room
     implementation(Depends.Libraries.room_runtime)
     kapt(Depends.Libraries.room_compiler)
+    implementation(Depends.Libraries.room_ktx) // Kotlin Extensions and Coroutines support for Room
 
     // Coroutines
     implementation(Depends.Libraries.coroutines_core)
