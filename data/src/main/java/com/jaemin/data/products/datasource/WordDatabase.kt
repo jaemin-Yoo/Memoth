@@ -11,4 +11,8 @@ import com.jaemin.domain.products.entity.Word
 abstract class WordDatabase: RoomDatabase() {
 
     abstract val wordDao: WordDao
+
+    companion object {
+        const val DATABASE_NAME = "memoth_db"
+    }
 }

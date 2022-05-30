@@ -53,4 +53,9 @@ dependencies {
     // dependency injection
     implementation(Depends.Libraries.hilt_android)
     kapt(Depends.Libraries.hilt_android_compiler)
+
+    // Room
+    implementation(Depends.Libraries.room_runtime)
+    kapt(Depends.Libraries.room_compiler)
+    implementation(Depends.Libraries.room_ktx) // Kotlin Extensions and Coroutines support for Room
 }
