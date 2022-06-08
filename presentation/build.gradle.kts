@@ -53,10 +53,6 @@ dependencies {
     androidTestImplementation(Depends.Libraries.test_ext_junit)
     androidTestImplementation(Depends.Libraries.espresso_core)
 
-    // Custom bottom nav
-    //implementation(Depends.Libraries.zagori_bottom_navigation)
-    implementation("com.github.ibrahimsn98:SmoothBottomBar:1.7.9")
-
     // Jetpack navigation
     implementation(Depends.Libraries.navigation_fragment_ktx)
     implementation(Depends.Libraries.navigation_ui_ktx)

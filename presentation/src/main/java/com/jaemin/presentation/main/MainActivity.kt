@@ -10,6 +10,7 @@ import android.widget.PopupMenu
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.jaemin.presentation.R
 import com.jaemin.presentation.base.util.Height.Companion.statusBarHeight
 import com.jaemin.presentation.databinding.ActivityMainBinding
@@ -40,11 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setBottomNav(){
-        val popupMenu = PopupMenu(this, null)
-        popupMenu.inflate(R.menu.bottom_navigation_menu)
-        val menu = popupMenu.menu
-
-        binding.bottomNavigation.setupWithNavController(menu, navController)
+        binding.bottomNavigation.setupWithNavController(navController)
     }
 
     private fun setFullScreen(){
